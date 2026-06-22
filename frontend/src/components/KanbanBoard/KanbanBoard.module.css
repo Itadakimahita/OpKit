@@ -1,0 +1,60 @@
+/* frontend/src/components/KanbanBoard/KanbanBoard.module.css */
+.board {
+  display: flex;
+  gap: 16px;
+  min-height: 0;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.column {
+  display: flex;
+  flex: 0 0 300px;
+  flex-direction: column;
+  max-height: calc(100vh - 230px);
+  min-height: 320px;
+  border: 1px solid #d9e0ea;
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #d9e0ea;
+}
+
+.columnHeader h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 0.86rem;
+}
+
+.columnHeader span {
+  min-width: 24px;
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: #e5e7eb;
+  color: #374151;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.taskList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+@media (max-width: 760px) {
+  .column {
+    flex-basis: 86vw;
+    max-height: none;
+  }
+}

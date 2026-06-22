@@ -1,0 +1,72 @@
+/* frontend/src/components/AddTaskForm/AddTaskForm.module.css */
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+  padding: 14px;
+  border: 1px solid #d9e0ea;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(220px, 1.4fr);
+  gap: 12px;
+}
+
+.fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #374151;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.fields input,
+.fields textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 9px 10px;
+  color: #111827;
+  font: inherit;
+}
+
+.fields textarea {
+  resize: vertical;
+}
+
+.form button {
+  min-height: 39px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 16px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.error {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 760px) {
+  .form,
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}
